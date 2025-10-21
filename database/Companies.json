@@ -1,0 +1,43 @@
+[
+  {
+    "position": "Full Stack Developement",
+    "company": "Udemy",
+    "duration": "September 2025",
+    "color": {
+      "h": "221",
+      "s": "79%",
+      "l": "51%"
+    }
+  },
+  {
+    "position": "Google Cloud Skill Badges",
+    "company": "Google Cloud Plateform",
+    "duration": "August 2024",
+    "color": {
+      "h": "206",
+      "s": "59%",
+      "l": "44%"
+    }
+  },
+  {
+    "position": "Google Cybersecurity Certificate",
+    "company": "Coursera",
+    "duration": "April 2023 - Aug 2024",
+    "color": {
+      "h": "240",
+      "s": "100%",
+      "l": "45%"
+    }
+  },
+  {
+    "position": "Data Strucure and Algorithm",
+    "company": "Geeksforgeeks",
+    "duration": "May 2025",
+    
+    "color": {
+      "h": "210",
+      "s": "0%",
+      "l": "90%"
+    }
+  }
+]

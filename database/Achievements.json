@@ -1,0 +1,31 @@
+[
+  
+  {
+    "id": 1,
+    "image": "/swags.jpeg",
+    "title": "Google Cloud Swags",
+    "subtitle": "Google Cloud Plateform (GCP)",
+    "description": "Earned recognition and official swag from Google for dedicated learning and the successful completion of multiple hands-on labs. This accomplishment demonstrates practical experience with core Google Cloud services and a commitment to continuous skill development in cloud computing."
+  },
+  {
+    "id": 2,
+    "image": "/appreciation.jpg",
+    "title": "Letter of Appreciation",
+    "subtitle": "Kashi Institute of Technology",
+    "description": "Honored with a Letter of Appreciation from Kashi Institute of Technology, recognizing my dual distinction in both sustained academic excellence and advanced coding skills. This commendation highlights my commitment to mastering theoretical computer science concepts and applying them to solve practical, technical challenges."
+  },
+  {
+    "id": 3,
+    "image": "/winner.jpg",
+    "title": "Coder of the Year",
+    "subtitle": "T&P Department KIT",
+    "description": "Awarded the 'Coder of the Year 2024' title by the Training & Placement department in recognition of outstanding contributions to coding and exceptional problem-solving abilities."
+  },
+  {
+    "id": 4,
+    "image": "/sih.jpg",
+    "title": "SIH Winner (Internal)",
+    "subtitle": "Smart India Hackathon 2025",
+    "description": "Led my team to victory in our institution's internal Smart India Hackathon, a high-intensity coding competition designed to identify the most innovative and viable technology solutions. Over 24 hours, we designed, developed, and presented a functional prototype that effectively addressed a complex problem statement, earning the top position among all competing teams."
+  }
+]

@@ -1,0 +1,107 @@
+[
+  
+  {
+    "title": "Twitter Dapp",
+    "image": "/reference/twitterimg.jpg",
+    "description": "Premier design studio and architecture company in the UAE. Enhance your projects with our top architects, leading the way in innovative and timeless design solutions.",
+    "url":  "#",
+    "date": "2022",
+    "service":  "Full Stack Development",
+    "color": {
+      "h": "240",
+      "s": "0%",
+      "l": "60%"
+    }
+  },
+  {
+    "title": "NFT Store",
+    "image": "/reference/ngtimg.jpg",
+    "description": "Welcome to the Year of Sustainability. Sustainability is about protecting our land, resources and one another today, for a better tomorrow.",
+    "url": "#",
+    "date": "2023",
+    "service": "Full Stack Development",
+    "color": {
+      "h": "30",
+      "s": "50%",
+      "l": "90%"
+    }
+  },
+  {
+    "title": "Spotify Clone",
+    "image": "/reference/spoimg.jpg",
+    "description": "G42 is a technology group that invents visionary artificial intelligence for a better everyday. Born in Abu Dhabi and operating across the world, we champion AI as a powerful force for good across industries and societies.",
+    "url":  "#",
+    "date": "2021",
+    "service":  "Development",
+    "color": {
+      "h": "0",
+      "s": "0%",
+      "l": "100%"
+    }
+  },
+  {
+    "title": "Handyy",
+    "image": "/reference/handy.jpg",
+    "description": "FINTX is the fintech arm of the Emirates Post Group, with the vision of building a fintech ecosystem for the UAE & beyond.",
+    "url": "#",
+    "date": "2023",
+    "service": "Frontend Development",
+    "color": {
+      "h": "20",
+      "s": "50%",
+      "l": "80%"
+    }
+  },
+  {
+    "title": "Coca Cola",
+    "image": "/reference/cocimg.jpg",
+    "description": "In a world of data theft and device tracking, FERRONATO is the first luxury accessories range to combine privacy technology with handcrafted Italian design.",
+    "url":  "#",
+    "date": "2023",
+    "service":  "Frontend Development",
+    "color": {
+      "h": "255",
+      "s": "0%",
+      "l": "20%"
+    }
+  },
+  {
+    "title": "Foodie",
+    "image": "/reference/foodie.jpg",
+    "description": "Luxury X, a holding company that specializes in communications for the most luxury of brands. We generate bespoke creative communications for our brands with a common vision to add the X factor, which we describe as a classy, contemporary luxe twist. We work with a list of exclusive brands across the globe that share our passion to push creative and artistic boundaries for the richest outcomes. Our goal is singular, but shared across our portfolio.",
+    "url":  "#",
+    "date": "2023",
+    "service":  "Development",
+    "color": {
+      "h": "0",
+      "s": "0%",
+      "l": "80%"
+    }
+  },
+  {
+    "title": "DOGOMO",
+    "image": "/reference/dogomo.jpg",
+    "description": "Since 2004, MSA, The Culinary Arts Academy of Istanbul has been delivering professional education programs.",
+    "url":  "#",
+    "date": "2023",
+    "service":  "Frontend Development",
+    "color": {
+      "h": "180",
+      "s": "30%",
+      "l": "77%"
+    }
+  },
+  {
+    "title": "Diane Dacassa",
+    "image": "/reference/dd.jpg",
+    "description": "All over the country with widespread distribution network and world brands.",
+    "url":  "#",
+    "date": "2023",
+    "service":  "Design & Development",
+    "color": {
+      "h": "207",
+      "s": "81%",
+      "l": "31%"
+    }
+  }
+]

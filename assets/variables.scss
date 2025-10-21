@@ -1,0 +1,37 @@
+:root {
+  /* Spacing */
+  --x-spacing: clamp(1.5rem, 3vw, 6rem);
+  --y-spacing: clamp(4rem, 8vw, 12rem);
+  
+  /* Font Sizes */
+  --fs-xxl: clamp(4rem, 8vw, 9rem);
+  --fs-xl: clamp(3rem, 6vw, 7rem);
+  --fs-lg: clamp(2.4rem, 4vw, 5rem);
+  --fs-md: clamp(1.8rem, 3vw, 3rem);
+  --fs-sm: clamp(1.4rem, 2vw, 1.6rem);
+  --fs-xs: clamp(1.2rem, 1.5vw, 1.4rem);
+  
+  /* Border Radius */
+  --border-radius-lg: clamp(2rem, 3vw, 3rem);
+  --border-radius-md: clamp(1.5rem, 2vw, 2rem);
+  --border-radius-sm: clamp(1rem, 1.5vw, 1.5rem);
+  
+  /* Grid Gaps */
+  --grid-gap-lg: clamp(3rem, 5vw, 6rem);
+  --grid-gap-md: clamp(2rem, 3vw, 3rem);
+  --grid-gap-sm: clamp(1rem, 2vw, 2rem);
+}
+
+/* Dark theme specific variables */
+[data-theme='dark'] {
+  /* Add dark theme specific variables here */
+}
+
+/* Media query adjustments */
+@media (max-width: 576px) {
+  :root {
+    /* Adjust spacing for mobile */
+    --x-spacing: 1.5rem;
+    --y-spacing: 4rem;
+  }
+}

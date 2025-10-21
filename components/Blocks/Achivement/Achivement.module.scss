@@ -1,0 +1,451 @@
+@import '/assets/media-queries.scss';
+
+.section{
+  position: relative;
+  padding: var(--y-spacing) 0;
+  background: hsl(var(--color-bg-alt));
+  
+  @include respond-below(sm) {
+    padding: calc(var(--y-spacing) * 0.75) 0;
+  }
+  
+  @include respond-below(xs) {
+    // add a little extra bottom space to separate from next section
+    padding: calc(var(--y-spacing) * 0.5) 0 calc(var(--y-spacing) * 0.9);
+  }
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "tra";
+  font-weight: 400;
+  margin-bottom: 4rem; // add space below title
+  @include respond-below(xs) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+}
+.films{
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.film{
+  margin-top: 12rem; // increased margin from title
+  width: 100%;
+  height: 70dvh;
+  display: flex;
+  justify-content: space-between;
+  @include respond-below(sm) {
+    height: fit-content;
+  }
+  @include respond-below(xs) {
+    height: fit-content;
+    width: 100%;
+      flex-direction: column;
+      
+    }
+}
+.video{
+  width: 65%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 3rem;
+  @include respond-below(xs) {
+      width: 100%;
+      
+  
+    }
+}
+.name{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1rem;
+  width: 30%;
+  @include respond-below(xs) {
+      width: 100%;
+      margin-top: 2rem;
+  
+  
+    }
+}
+.cardsWrapper{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--grid-gap-lg);
+  width: 100%;
+  align-items: start;
+  
+  @include respond-below(md) {
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--grid-gap-md);
+  }
+  
+  @include respond-below(sm) {
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap-md);
+  }
+  
+  @include respond-below(xs) {
+    gap: var(--grid-gap-sm);
+  }
+}
+
+.cardsList{
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 45rem;
+  margin: 2rem 0 4rem;
+  perspective: 1000px;
+  perspective-origin: center center;
+  
+  &:hover {
+    z-index: 10;
+  }
+  
+  @include respond-below(lg) {
+    min-height: 40rem;
+  }
+  
+  @include respond-below(md) {
+    min-height: 35rem;
+  }
+  
+  @include respond-below(sm) {
+    height: auto;
+    min-height: 32rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap-md);
+    perspective: none;
+    margin: 1rem 0 2rem;
+    padding: 1rem;
+  }
+  
+  @include respond-below(xs) {
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 1rem 0 2rem; /* increase bottom margin to avoid clipping */
+    
+    // Enable horizontal scroll for very small screens
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+    position: relative;
+  min-height: 40rem; /* ensure enough height for first row content */
+    
+    // Center alignment setup
+    &::before,
+    &::after {
+      content: '';
+      min-width: calc((100% - 85vw) / 2);
+    }
+    
+    // Improved scrollbar
+    &::-webkit-scrollbar {
+      height: 4px;
+      background: transparent;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: hsla(var(--color-white), 0.1);
+      border-radius: 2px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: hsla(var(--color-white), 0.3);
+      border-radius: 2px;
+    }
+
+    // Container layout
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+}
+
+.card{
+  position: absolute;
+  width: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  will-change: transform, opacity, filter;
+  transform-origin: center center;
+  pointer-events: auto;
+  transition: all 0.3s ease-out;
+  
+  @include respond-below(lg) {
+    width: 28rem;
+  }
+  
+  @include respond-below(md) {
+    width: 24rem;
+  }
+  
+  @include respond-below(sm) {
+    position: relative;
+    width: 100%;
+    transform: none !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+  
+  @include respond-below(xs) {
+    position: relative;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    min-width: 85vw;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    opacity: 0.4;
+    filter: blur(2px);
+    transform: scale(0.95);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, opacity, filter;
+    
+    &.isActive,
+    &:target {
+      opacity: 1;
+      filter: none;
+      transform: scale(1);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      z-index: 2;
+
+      .cardImage {
+        transform: scale(1.02);
+      }
+
+      // Show the inline title on active card for clarity
+      .cardTitle {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+      }
+    }
+    
+    // Intersection Observer target
+    &.inView {
+      opacity: 1;
+      filter: none;
+      transform: scale(1);
+
+      .cardTitle {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+      }
+    }
+    
+    // Adjacent cards
+    &.isActive ~ .card,
+    &:target ~ .card,
+    &.inView ~ .card {
+      opacity: 0.2;
+      filter: blur(4px);
+      transform: scale(0.9);
+    }
+  }
+
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1.2rem;
+    height: 1.6rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.02));
+    filter: blur(8px);
+    z-index: -1;
+    transform: translateY(6px) scale(.98);
+    border-radius: 50%;
+  }
+
+  &.isActive {
+    z-index: 1000;
+    filter: blur(0);
+    
+    ~ .card {
+      opacity: 0.2;
+      filter: blur(4px);
+    }
+  }
+  
+  .cardsList:has(.isActive) &:not(.isActive) {
+    opacity: 0.2;
+    filter: blur(4px);
+  }
+  
+  @include respond-below(xs) {
+    width: 20rem;
+    
+    position: relative;
+    transform: none !important;
+  }
+}
+.cardImage{
+  width: 100%;
+  height: 280px;
+  border-radius: .2rem;
+  object-fit: cover;
+  display: block;
+  padding-bottom: 1rem;
+  
+  @include respond-below(xs) {
+    height: 320px;
+    width: 100%;
+  }
+}
+.cardTitle{
+  font-size: var(--fs-xs);
+  color: hsl(var(--color-white));
+  
+  @include respond-below(xs) {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+  }
+}
+
+.details{
+  width: 100%;
+  min-height: 12rem;
+  position: relative;
+  
+  @include respond-below(md) {
+    width: 100%;
+  }
+  
+  @include respond-below(sm) {
+    width: 100%;
+    // let content define the height on small screens
+    height: auto;
+    min-height: 0;
+  }
+  
+  @include respond-below(xs) {
+    // fully auto on very small screens
+    height: auto;
+    min-height: 0;
+  }
+}
+.detailItem{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.28s ease-in-out;
+  pointer-events: none;
+  
+  @include respond-below(xs) {
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    transition-delay: 0.15s;
+    will-change: opacity, transform;
+  }
+  
+  &.isActive,
+  .card.inView &,
+  .card:target & {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  // On small screens, take the active detail out of absolute positioning
+  // so the container can grow to fit the full description.
+  @include respond-below(sm) {
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    display: none;
+    transition: none; // No transition on mobile
+    transition-delay: 0s; // Remove delay
+
+    &.isActive {
+      display: block;
+      opacity: 1;
+      transform: none;
+      visibility: visible;
+    }
+  }
+}
+.detailTitle{
+  font-size: var(--fs-md);
+  color: hsl(var(--color-white));
+  margin-bottom: 1rem;
+}
+.detailSub{
+  font-size: var(--fs-xs);
+  color: hsl(var(--color-body));
+}
+.font{
+  color: hsl(var(--color-white));
+  font-size: 5rem;
+  font-family: "tra";
+    font-weight: 500;
+}
+.description {
+  font-family: "gilroy";
+  margin-bottom: auto;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  color: hsl(var(--color-body));
+  line-height: 1.6;
+  max-width: 100%;
+}
+.redirect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--fs-sm);
+  color: hsl(var(--color-white));
+  font-weight: var(--fw-regular);
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  &:hover {
+    background: hsl(var(--color-black));
+
+    .dark & {
+      background: hsl(var(--color-primary));
+    }
+  }
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+
+    rect {
+      .dark & {
+        fill: hsl(var(--color-black));
+      }
+    }
+
+    path {
+      .dark & {
+        fill: hsl(var(--color-white));
+      }
+    }
+  }
+
+  .dark & {
+    color: hsl(var(--color-black));
+  }
+}

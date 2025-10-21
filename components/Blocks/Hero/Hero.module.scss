@@ -1,0 +1,188 @@
+@import '/assets/media-queries.scss';
+
+.hero {
+  position: relative;
+
+  .inner {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 100dvh;
+    padding: calc( (var(--x-spacing))) var(--x-spacing) calc(var(--x-spacing) * 2);
+
+    .image {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        z-index: 1;
+        width: 40vw;
+        height: 90vh;
+      @include respond-below(xs) {
+          justify-content: center;
+          align-items: flex-end;
+          height: 60vh;
+          width: 100vw;
+          overflow: hidden;
+
+        }
+      }
+    @include respond-below(md) {
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      min-height: 100dvh;
+      height: auto;
+      padding: var(--y-spacing) var(--x-spacing);
+      gap: var(--grid-gap-lg);
+    }
+    
+    @include respond-below(xs) {
+      padding: var(--y-spacing) 1.5rem;
+    }
+  }
+  
+    
+  
+    
+  
+}
+.boldTitle {
+  font-family: "tra";
+    font-weight: 400;
+  font-size: clamp(4.4rem, 8dvw, var(--fs-xxl));
+  color: hsl(var(--color-white));
+  line-height: 1.3cap;
+  text-align: start;
+  @include respond-below(xs) {
+    text-align: center;
+    line-height: 1.8cap;
+    font-size: 4rem;
+  }
+  .boldTitleLeft{
+    font-size: var(--fs-xml);
+    @include respond-below(xs) {
+      font-size: 7.5rem;
+    }
+    
+  }
+  span {
+    display: block;
+
+    &.boldTitleLeft,
+    &.boldTitleRight {
+      >div {
+        transition: all .3s ease;
+
+        &:hover {
+          transform: scale(1.3);
+        }
+
+        &:has(+ :hover),
+        &:hover+div {
+          transform: scale(1.2);
+        }
+
+        &:has(+ div + :hover),
+        &:hover+div+div {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      font-style: italic;
+    }
+  }
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40vw;
+  height: 90vh;
+  @include respond-above(xl) {
+    max-width: 100vw;
+  }
+  @include respond-below(xs) {
+    width: 100vw;
+    height: 40vh;
+    justify-content: center;
+    align-items: end;
+    padding: calc((var(--x-spacing))) 5vw;
+  }
+
+  
+
+  .icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 9rem;
+    border-radius: 100vw;
+    vertical-align: baseline;
+    overflow: hidden;
+    margin: 0 1.5rem;
+    z-index: 111;
+    position: relative;
+    @include respond-below(xml) {
+      height: 7.8rem;
+      width: 24rem;
+    }
+    @include respond-below(lg) {
+      height: 6.4rem;
+      width: 20rem;
+    }
+    @include respond-below(md) {
+      margin: 1.5rem auto;
+      display: flex;
+    }
+    .heroImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.6);
+      transform-origin: left center;
+      border-radius: 100vw;
+    }
+    .reveal {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #b9b5db, hsl(var(--color-bg)));
+      z-index: 1;
+      border-radius: 100vw;
+    }
+  }
+
+  p{
+    font-size: var(--fs-md);
+    font-weight: var(--fw-light);
+    color: hsl(var(--color-white));
+    max-width: 70rem;
+    margin: 6rem auto 0;
+  }
+}
+
+
+
+.background {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: -1;
+
+  > * {
+    position: absolute;
+  }
+
+
+}
+
+

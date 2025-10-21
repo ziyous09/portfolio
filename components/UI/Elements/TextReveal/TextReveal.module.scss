@@ -1,0 +1,10 @@
+.root .splitLine{
+  overflow: hidden;
+}
+
+/* Make words non-breaking when revealed - use a local class for purity */
+.root .word {
+  display: inline-block;
+  white-space: nowrap;
+  word-break: keep-all;
+}

@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "name": "Kunal",
+    "title": "Kunal Maurya - Portfolio",
+    "description": "I develop accessible, responsive, interactive, and animated websites with a strong focus on performance.",
+    "timeZone": "America/Los_Angeles",
+    "locale": "en-US"
+  },
+  "personal": {
+    "name": "Kunal",
+    "surname": "Maurya",
+    "role": "Software Developer",
+    "email": "kunalmaurya4188@gmail.com",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "username": "@kunalmaurya",
+    "resumeURL": "https://drive.google.com/file/d/1bA2WvfccbrBqMBXnEkQfg8CxwS8XCbJj/view?usp=sharing"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/_kunalmaurya_/",
+    "linkedin": "https://www.linkedin.com/in/kunalmaurya/",
+    "github": "https://github.com/ziyous09/",
+    "youtube": "",
+    "opensea": "",
+    "page": "",
+    "twitter": ""
+  }
+  
+}
