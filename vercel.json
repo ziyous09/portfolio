@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/resume",
+      "destination": "https://resume-builder-kunalmaurya4188-9615s-projects.vercel.app/"
+    },
+    {
+      "source": "/resume/:path*",
+      "destination": "https://resume-builder-kunalmaurya4188-9615s-projects.vercel.app/:path*"
+    }
+  ]
+}
